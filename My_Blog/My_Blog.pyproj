@@ -43,6 +43,14 @@
     <Compile Include="My_Blog\settings.py" />
     <Compile Include="My_Blog\urls.py" />
     <Compile Include="My_Blog\wsgi.py" />
+    <Compile Include="news\admin.py" />
+    <Compile Include="news\apps.py" />
+    <Compile Include="news\migrations\__init__.py" />
+    <Compile Include="news\models.py" />
+    <Compile Include="news\tests.py" />
+    <Compile Include="news\urls.py" />
+    <Compile Include="news\views.py" />
+    <Compile Include="news\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -55,8 +63,13 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="My_Blog\" />
+    <Folder Include="news\" />
+    <Folder Include="news\migrations\" />
+    <Folder Include="news\templates\" />
+    <Folder Include="news\templates\news\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="news\templates\news\news.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

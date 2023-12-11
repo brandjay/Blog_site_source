@@ -3,6 +3,7 @@ Definition of urls for My_Blog.
 """
 
 from datetime import datetime
+from django.conf.urls import include
 from django.urls import path
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
@@ -27,4 +28,6 @@ urlpatterns = [
          name='login'),
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('admin/', admin.site.urls),
+    path('', include('news.urls')),
+
 ]
