@@ -1,8 +1,21 @@
-<html>
-<head><title></title></head>
+<!-- templates/news/news.html -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Blogs</title>
+</head>
 <body>
-
-<h2>Welcome to news!</h2>
+    <h1>All Blogs</h1>
+    <ul>
+        {% for blog in blogs %}
+        <li>
+            <h2>{{ blog.blog_title }}</h2>
+            <p>{{ blog.blog_content }}</p>
+            <p>Published on: {{ blog.blog_date }}</p>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
