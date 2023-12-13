@@ -5,11 +5,11 @@
 <div class="card">
     <div class="card-body">
         {% for blog in blogs %}
-        <h5 class="card-title">{{ blog.blog_title }}</h5>
+        <h5 class="card-title"><a href="{% url 'display_article' blog_id=blog.id %}">{{ blog.blog_title }}</a></h5>
         <p class="card-text">{{ blog.blog_content }}</p>
         <p>Published on: {{ blog.blog_date }}</p>
         {% if blog.blog_image %}
-        <img src="{{ blog.blog_image.url }}" alt="{{ blog.blog_title }} Image">
+        <img src="{{ blog.blog_image.url }}" alt="{{ blog.blog_title }} Image" style="border-radius: 90px;">
         {% endif %}
         {% endfor %}
     </div>
